@@ -18,13 +18,13 @@ export function SearchInput() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto flex">
+    <form onSubmit={handleSubmit} className="w-full max-w-xl mx-auto flex">
       <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search movies..."
-        className="flex-1 border px-4 py-2 rounded-l-lg rounded-r-none h-10"
+        className="border px-4 py-2 rounded-l-lg rounded-r-none h-10 w-full"
       />
       <Button type="submit" className="rounded-l-none h-10 w-12">
         <Search />
