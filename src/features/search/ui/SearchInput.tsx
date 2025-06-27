@@ -14,6 +14,7 @@ export function SearchInput() {
     if (value.trim()) {
       router.push(`/search?query=${encodeURIComponent(value.trim())}`);
     }
+    setValue("");
   };
 
   return (
