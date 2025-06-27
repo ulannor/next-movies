@@ -1,6 +1,6 @@
 "use client";
 
-import { usePopularMovies } from "@/src/entities/movie/api/getPopularMovies";
+import { usePopularMovies } from "@/src/entities/movie/api/getPopularMoviesQuery";
 import { Button } from "@/src/shared/ui/button";
 import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
 import { useRouter } from "next/navigation";
