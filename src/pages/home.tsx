@@ -1,4 +1,4 @@
-import { MovieGrid } from "@/src/widgets/movie-grid/ui/movieGrid";
+import { MovieGrid } from "@/src/widgets/movie-grid/ui/MovieGrid";
 
 export default function HomePage() {
   return (

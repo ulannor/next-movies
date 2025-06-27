@@ -2,7 +2,7 @@
 
 import { usePopularMovies } from "@/src/entities/movie/api/getPopularMovies";
 import { Button } from "@/src/shared/ui/button";
-import { MovieCard } from "@/src/entities/movie/ui/movieCard";
+import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
 import { useRouter } from "next/navigation";
 
 interface Props {
@@ -22,7 +22,7 @@ export function MovieGrid({ page }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {data.results.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { ReactQueryClientProvider } from "@/src/app/context/ReactQueryClientProvider";
+import { Header } from "@/src/widgets/header/ui/Header";
 
 import "./globals.css";
 
@@ -22,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReactQueryClientProvider>
-        <body className={`${roboto.className}  antialiased`}>{children}</body>
+        <body className={`${roboto.className}  antialiased`}>
+          <Header />
+          {children}
+        </body>
       </ReactQueryClientProvider>
     </html>
   );
