@@ -1,12 +1,14 @@
 import { Movie } from "@/src/entities/movie/model/types";
+import { CastMember } from "@/src/entities/movie/api/fetchMovieCast";
 import Image from "next/image";
 import { Badge } from "@/src/shared/ui/badge";
 
 interface Props {
   movie: Movie;
+  cast: CastMember[];
 }
 
-export function MovieDetails({ movie }: Props) {
+export function MovieDetails({ movie, cast }: Props) {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       <div className="relative aspect-[2/3] w-full rounded overflow-hidden">
@@ -32,7 +34,18 @@ export function MovieDetails({ movie }: Props) {
         </div>
         <p className="text-gray-700">{movie.overview}</p>
         <p>⭐ {movie.vote_average} / 10</p>
-        {/* add genres, runtime, etc if needed */}
+
+        <div className="space-y-2 pt-4">
+          <h2 className="font-semibold text-lg">Top Cast</h2>
+          <ul className="space-y-1">
+            {cast.map((actor) => (
+              <li key={actor.id} className="text-sm">
+                {actor.name}{" "}
+                <span className="text-gray-500">as {actor.character}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

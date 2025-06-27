@@ -4,6 +4,7 @@ import { usePopularMovies } from "@/src/entities/movie/api/getPopularMovies";
 import { Button } from "@/src/shared/ui/button";
 import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
 import { useRouter } from "next/navigation";
+import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
 
 interface Props {
   page: number;
@@ -17,8 +18,19 @@ export function MovieGrid({ page }: Props) {
     router.push(`/page/${newPage}`);
   };
 
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error loading movies.</div>;
+  if (isPending)
+    return (
+      <div className="flex justify-center items-center py-12">
+        <LoadingSpinner size={32} className="text-gray-500" />
+      </div>
+    );
+
+  if (isError)
+    return (
+      <div className="flex justify-center items-center py-12">
+        <div>Error loading movies.</div>{" "}
+      </div>
+    );
 
   return (
     <div className="space-y-6">
@@ -51,7 +63,9 @@ export function MovieGrid({ page }: Props) {
       </div>
 
       {isFetching && (
-        <div className="text-center text-gray-400">Loading...</div>
+        <div className="flex justify-center pt-4">
+          <LoadingSpinner className="text-gray-400" />
+        </div>
       )}
     </div>
   );
