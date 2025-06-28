@@ -1,9 +1,9 @@
 "use client";
 
 import { Heart } from "lucide-react";
-import { Button } from "@/src/shared/ui/button";
-import { Movie } from "@/src/entities/movie/model/types";
-import { useFavoritesStore } from "@/src/shared/store/favorites";
+import { Button } from "@/shared/ui/button";
+import { Movie } from "@/entities/movie/model/types";
+import { useFavoritesStore } from "@/shared/store/favorites";
 
 interface LikeButtonProps {
   movie: Movie;

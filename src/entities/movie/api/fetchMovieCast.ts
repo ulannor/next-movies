@@ -1,4 +1,4 @@
-import { tmdbApi } from "@/src/shared/api/tmdb";
+import { tmdbApi } from "@/shared/api/tmdb";
 
 export interface CastMember {
   id: number;

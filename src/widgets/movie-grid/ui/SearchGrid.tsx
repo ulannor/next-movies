@@ -2,12 +2,12 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useSearchMovies } from "@/src/entities/movie/api/useSearchMovies";
-import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
-import { Button } from "@/src/shared/ui/button";
-import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
-import { Movie } from "@/src/entities/movie/model/types";
-import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
+import { useSearchMovies } from "@/entities/movie/api/useSearchMovies";
+import { MovieCard } from "@/entities/movie/ui/MovieCard";
+import { Button } from "@/shared/ui/button";
+import LoadingSpinner from "@/shared/ui/sub/LoadingSpinner";
+import { Movie } from "@/entities/movie/model/types";
+import { LikeButton } from "@/features/favorites/ui/LikeButton";
 
 export default function SearchGrid() {
   const searchParams = useSearchParams() ?? new URLSearchParams();

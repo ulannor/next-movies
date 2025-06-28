@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/src/shared/ui/button";
-import { BackButton } from "@/src/shared/ui/sub/BackButton";
+import { Button } from "@/shared/ui/button";
+import { BackButton } from "@/shared/ui/sub/BackButton";
 import { useEffect } from "react";
 
 export default function Error({

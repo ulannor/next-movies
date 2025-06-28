@@ -1,8 +1,8 @@
-import { fetchMovieById } from "@/src/entities/movie/api/fetchMovieById";
-import { fetchMovieCast } from "@/src/entities/movie/api/fetchMovieCast";
+import { fetchMovieById } from "@/entities/movie/api/fetchMovieById";
+import { fetchMovieCast } from "@/entities/movie/api/fetchMovieCast";
 
-import { MovieDetails } from "@/src/widgets/movie-details/ui/MovieDetails";
-import { BackButton } from "@/src/shared/ui/sub/BackButton";
+import { MovieDetails } from "@/widgets/movie-details/ui/MovieDetails";
+import { BackButton } from "@/shared/ui/sub/BackButton";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

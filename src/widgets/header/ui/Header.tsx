@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { SearchInput } from "@/src/features/search/ui/SearchInput";
-import { ModeToggle } from "@/src/features/mode/ui/ModeToggle";
+import { SearchInput } from "@/features/search/ui/SearchInput";
+import { ModeToggle } from "@/features/mode/ui/ModeToggle";
 
 export function Header() {
   return (

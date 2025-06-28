@@ -1,8 +1,8 @@
-import { Movie } from "@/src/entities/movie/model/types";
-import { CastMember } from "@/src/entities/movie/api/fetchMovieCast";
+import { Movie } from "@/entities/movie/model/types";
+import { CastMember } from "@/entities/movie/api/fetchMovieCast";
 import Image from "next/image";
-import { Badge } from "@/src/shared/ui/badge";
-import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
+import { Badge } from "@/shared/ui/badge";
+import { LikeButton } from "@/features/favorites/ui/LikeButton";
 
 interface Props {
   movie: Movie;

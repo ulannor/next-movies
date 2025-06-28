@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { Movie } from "@/src/entities/movie/model/types";
+import { Movie } from "@/entities/movie/model/types";
 
 interface FavoritesState {
   favorites: Movie[];

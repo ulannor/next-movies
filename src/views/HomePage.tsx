@@ -1,6 +1,6 @@
 "use client";
 
-import { MovieGrid } from "@/src/widgets/movie-grid/ui/MovieGrid";
+import { MovieGrid } from "@/widgets/movie-grid/ui/MovieGrid";
 
 export default function HomePage() {
   return (

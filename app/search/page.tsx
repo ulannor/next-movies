@@ -1,5 +1,5 @@
-import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
-import SearchPage from "@/src/views/SearchPage";
+import LoadingSpinner from "@/shared/ui/sub/LoadingSpinner";
+import SearchPage from "@/views/SearchPage";
 import { Suspense } from "react";
 
 export default function Page() {

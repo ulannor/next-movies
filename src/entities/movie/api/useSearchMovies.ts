@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { tmdbApi } from "@/src/shared/api/tmdb";
+import { tmdbApi } from "@/shared/api/tmdb";
 
 export function useSearchMovies(query: string, page = 1) {
   return useQuery({

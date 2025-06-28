@@ -1,5 +1,5 @@
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
-import { tmdbApi } from "@/src/shared/api/tmdb";
+import { tmdbApi } from "@/shared/api/tmdb";
 import { Movie } from "../model/types";
 
 interface PopularMoviesResponse {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/src/shared/ui/button";
+import { Button } from "@/shared/ui/button";
 import { Search } from "lucide-react";
 
 export function SearchInput() {

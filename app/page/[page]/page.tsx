@@ -1,4 +1,4 @@
-import { MovieGrid } from "@/src/widgets/movie-grid/ui/MovieGrid";
+import { MovieGrid } from "@/widgets/movie-grid/ui/MovieGrid";
 
 type Params = Promise<{ page: string }>;
 

@@ -1,5 +1,5 @@
 import { Loader } from "lucide-react";
-import { cn } from "@/src/shared/lib/utils";
+import { cn } from "@/shared/lib/utils";
 
 export interface ISVGProps extends React.SVGProps<SVGSVGElement> {
   size?: number;

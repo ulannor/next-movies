@@ -1,11 +1,11 @@
 "use client";
 
-import { usePopularMovies } from "@/src/entities/movie/api/getPopularMoviesQuery";
-import { Button } from "@/src/shared/ui/button";
-import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
+import { usePopularMovies } from "@/entities/movie/api/getPopularMoviesQuery";
+import { Button } from "@/shared/ui/button";
+import { MovieCard } from "@/entities/movie/ui/MovieCard";
 import { useRouter } from "next/navigation";
-import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
-import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
+import LoadingSpinner from "@/shared/ui/sub/LoadingSpinner";
+import { LikeButton } from "@/features/favorites/ui/LikeButton";
 
 interface Props {
   page: number;
