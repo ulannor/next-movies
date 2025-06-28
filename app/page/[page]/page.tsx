@@ -1,16 +1,15 @@
 import { MovieGrid } from "@/src/widgets/movie-grid/ui/MovieGrid";
 
-interface PageProps {
-  params: { page: string };
-}
+type Params = Promise<{ page: string }>;
 
-export default function MoviesByPage({ params }: PageProps) {
-  const page = parseInt(params.page, 10);
+export default async function MoviesByPage({ params }: { params: Params }) {
+  const { page } = await params;
+  const pageNumber = parseInt(page, 10);
 
   return (
     <main className="p-2">
       <section className="p-4 flex flex-col">
-        <MovieGrid page={isNaN(page) ? 1 : page} />;
+        <MovieGrid page={isNaN(pageNumber) ? 1 : pageNumber} />
       </section>
     </main>
   );

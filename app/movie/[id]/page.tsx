@@ -2,15 +2,14 @@ import { fetchMovieById } from "@/src/entities/movie/api/fetchMovieById";
 import { fetchMovieCast } from "@/src/entities/movie/api/fetchMovieCast";
 
 import { MovieDetails } from "@/src/widgets/movie-details/ui/MovieDetails";
-
 import { BackButton } from "@/src/shared/ui/sub/BackButton";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const movieId = params.id;
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   const [movie, cast] = await Promise.all([
-    fetchMovieById(movieId),
-    fetchMovieCast(movieId),
+    fetchMovieById(id),
+    fetchMovieCast(id),
   ]);
 
   return (
