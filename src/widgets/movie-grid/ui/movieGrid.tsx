@@ -5,6 +5,7 @@ import { Button } from "@/src/shared/ui/button";
 import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
 import { useRouter } from "next/navigation";
 import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
+import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
 
 interface Props {
   page: number;
@@ -36,7 +37,11 @@ export function MovieGrid({ page }: Props) {
     <div className="space-y-6">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {data.results.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
+          <MovieCard
+            key={movie.id}
+            movie={movie}
+            actionSlot={<LikeButton movie={movie} />}
+          />
         ))}
       </div>
 

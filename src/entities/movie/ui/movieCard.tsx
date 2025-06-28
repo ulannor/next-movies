@@ -1,27 +1,18 @@
 import Image from "next/image";
 import { Movie } from "../model/types";
 import Link from "next/link";
-import { useFavoritesStore } from "@/src/shared/store/favorites";
-import { Heart } from "lucide-react";
-import { Button } from "@/src/shared/ui/button";
 
 interface MovieCardProps {
   movie: Movie;
+  actionSlot?: React.ReactNode; // Optional action component
 }
 
-export function MovieCard({ movie }: MovieCardProps) {
-  const { add, remove, isFavorite } = useFavoritesStore();
-  const liked = isFavorite(movie.id);
-
+export function MovieCard({ movie, actionSlot }: MovieCardProps) {
   return (
     <div className="relative h-full">
-      <Button
-        onClick={() => (liked ? remove(movie.id) : add(movie))}
-        className="absolute top-2 right-2 z-10 py-2"
-        variant={"secondary"}
-      >
-        <Heart className={`size-6 ${liked ? "text-red-500" : ""}`} />
-      </Button>
+      {actionSlot && (
+        <div className="absolute top-2 right-4 z-10 py-2">{actionSlot}</div>
+      )}
 
       <Link href={`/movie/${movie.id}`}>
         <div className="border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full">

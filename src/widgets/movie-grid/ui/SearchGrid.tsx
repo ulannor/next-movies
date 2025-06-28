@@ -7,6 +7,7 @@ import { MovieCard } from "@/src/entities/movie/ui/MovieCard";
 import { Button } from "@/src/shared/ui/button";
 import LoadingSpinner from "@/src/shared/ui/sub/LoadingSpinner";
 import { Movie } from "@/src/entities/movie/model/types";
+import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
 
 export default function SearchGrid() {
   const searchParams = useSearchParams() ?? new URLSearchParams();
@@ -51,7 +52,11 @@ export default function SearchGrid() {
       ) : (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {data.results.map((movie: Movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              actionSlot={<LikeButton movie={movie} />}
+            />
           ))}
         </div>
       )}

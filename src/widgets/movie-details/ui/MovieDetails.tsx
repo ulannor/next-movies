@@ -2,6 +2,7 @@ import { Movie } from "@/src/entities/movie/model/types";
 import { CastMember } from "@/src/entities/movie/api/fetchMovieCast";
 import Image from "next/image";
 import { Badge } from "@/src/shared/ui/badge";
+import { LikeButton } from "@/src/features/favorites/ui/LikeButton";
 
 interface Props {
   movie: Movie;
@@ -12,6 +13,10 @@ export function MovieDetails({ movie, cast }: Props) {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       <div className="relative aspect-[2/3] w-full rounded overflow-hidden">
+        <div className="absolute top-2 right-4 z-10 py-2">
+          <LikeButton movie={movie}/>
+        </div>
+
         <Image
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
